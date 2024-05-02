@@ -1,0 +1,45 @@
+<div class="bg-gray-100 h-[100vh]">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Brand Logo -->
+            <div>
+                <a href="#" class="text-white text-lg font-semibold">
+                    CrickStream
+                </a>
+            </div>
+            <!-- Navigation Menus -->
+            <div class="flex space-x-4 flex items-center justify-between">
+                <div><a [routerLink]="'/live'" class="text-white cursor-pointer">Live Score</a></div>
+                <div><a [routerLink]="'/all-matches'" class="text-white cursor-pointer">All Matches</a></div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" style="align-items: center;">
+                        Men's World Cup 
+                        <i class="bi bi-caret-down-fill" style="font-size: 12px;"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div><a routerLink="/points/CWC2023" class="text-blue-500 cursor-pointer">CWC2023</a></div>
+                        <div><a [routerLink]="['/points-table/', 'CWC2019']" class="text-blue-500 cursor-pointer">CWC2019</a></div>
+                        <div><a [routerLink]="['/points-table/', 'CWC2015']" class="text-blue-500 cursor-pointer">CWC2015</a></div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" style="align-items: center;">
+                        Indian Premier League
+                        <i class="bi bi-caret-down-fill" style="font-size: 12px;"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div><a [routerLink]="['/points-table', 'IPL2024']" class="text-blue-500 cursor-pointer">IPL 2024</a></div>
+                        <div><a [routerLink]="['/points-table/', 'IPL2023']" class="text-blue-500 cursor-pointer">IPL 2023</a></div>
+                        <div><a [routerLink]="['/points-table/', 'IPL2022']" class="text-blue-500 cursor-pointer">IPL 2022</a></div>
+                        <div><a [routerLink]="['/points-table/', 'IPL2021']" class="text-blue-500 cursor-pointer">IPL 2021</a></div>
+                        <div><a [routerLink]="['/points-table/', 'IPL2020']" class="text-blue-500 cursor-pointer">IPL 2020</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-16">
+        <router-outlet></router-outlet>
+    </div>
+</div>
